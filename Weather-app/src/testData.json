@@ -1,0 +1,53 @@
+{
+    "count": 1,
+    "data": [
+        {
+            "app_temp": 17.6,
+            "aqi": 37,
+            "city_name": "Boston",
+            "clouds": 94,
+            "country_code": "US",
+            "datetime": "2024-01-23:21",
+            "dewpt": 14.3,
+            "dhi": 58.35,
+            "dni": 524.39,
+            "elev_angle": 11.2,
+            "ghi": 151.73,
+            "gust": 7.40625,
+            "h_angle": 45,
+            "lat": 30.79186,
+            "lon": -83.78989,
+            "ob_time": "2024-01-23 21:56",
+            "pod": "d",
+            "precip": 0,
+            "pres": 1019,
+            "rh": 81,
+            "slp": 1024.3999,
+            "snow": 0,
+            "solar_rad": 50.9,
+            "sources": [
+                "rtma",
+                "radar",
+                "satellite"
+            ],
+            "state_code": "GA",
+            "station": "KTVI",
+            "sunrise": "12:31",
+            "sunset": "23:03",
+            "temp": 17.6,
+            "timezone": "America/New_York",
+            "ts": 1706046997,
+            "uv": 0.47507754,
+            "vis": 15,
+            "weather": {
+                "description": "Light rain",
+                "code": 500,
+                "icon": "r01d"
+            },
+            "wind_cdir": "ESE",
+            "wind_cdir_full": "east-southeast",
+            "wind_dir": 102,
+            "wind_spd": 2.609375
+        }
+    ]
+}
