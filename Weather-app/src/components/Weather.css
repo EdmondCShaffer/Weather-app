@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Adjusted to column layout */
+    align-items: center; /* Centering content horizontally */
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #2196f3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0c7fd9;
+  }
+  
+  .temperature {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-left: auto;
+  }
+  
+  .toggle-container {
+    display: flex;
+    justify-content: space-between; /* Adjusted to distribute space between items */
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .toggle-label {
+    margin-right: 10px;
+  }
