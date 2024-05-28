@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import axios from "axios"
 import testData from '../testData.json'
 import Toggle from "./Toggle"
@@ -8,7 +8,7 @@ function Weather() {
     const [city, setCity] = useState<string>('')
     const [weatherData, setWeatherData] = useState(() => testData)
     const [isCelsius, setIsCelsius] = useState(true);
-    // const apiKey = 
+    const apiKey = import.meta.env.VITE_WEATHER_API_KEY
 
     // Converts the Temp to Fahrenheit 
     const convertTemp = (temp: number) => {
@@ -25,17 +25,17 @@ function Weather() {
     // TODO: Review API call Data seems to be incorrect temperature was wrong. May need different API? 
 
     // Weather API call
-    // const fetchWeatherData = async (event: React.FormEvent<HTMLFormElement>) => {
-    //     event.preventDefault(); 
-    //     try {
-    //       if (city.trim() !== '') {
-    //         const resp = await axios.get(`https://api.weatherbit.io/v2.0/current?city=${city}&country=US&key=${apiKey}&include=minutely`);
-    //         setWeatherData(resp.data);
-    //       }
-    //     } catch (error) {
-    //       console.error('Error fetching data:', error);
-    //     }
-    //   };
+    const fetchWeatherData = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault(); 
+        try {
+          if (city.trim() !== '') {
+            const resp = await axios.get(`https://api.weatherbit.io/v2.0/current?city=${city}&country=US&key=${apiKey}&include=minutely`);
+            setWeatherData(resp.data);
+          }
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      };
 
     // Sets city value from input
     const handleSetCity = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -48,7 +48,7 @@ function Weather() {
     return (
         <>
             <div className="container">
-                <form onSubmit={(e) => e.preventDefault()}>
+                <form onSubmit={fetchWeatherData}>
                     <label>Current Weather</label>
                     <input type="text" value={city} onChange={handleSetCity} placeholder="Enter location to see current weather conditions" />
                     <button type="submit">Submit</button>
